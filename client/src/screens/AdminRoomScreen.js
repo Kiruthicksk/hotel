@@ -31,8 +31,7 @@ function AdminRoomScreen() {
     setError("");
     setLoading(true);
     try {
-      const data = (await axios.post(https://hotel-manis-lodge.onrender.com/api/rooms/getallrooms")).data;
-      setRooms(data);
+      const data = (await axios.post("https://hotel-manis-lodge.onrender.com/api/rooms/getallrooms")).data;
     } catch (error) {
       console.log(error);
       setError(error);
