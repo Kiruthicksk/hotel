@@ -27,7 +27,7 @@ function Bookingscreen({ match }) {
         setError("");
         setLoading(true);
         const data = (
-          await axios.post("/api/rooms/getroombyid", {
+          await axios.post("https://hotel-manis-lodge.onrender.com/api/rooms/getroombyid", {
             roomid: match.params.roomid,
           })
         ).data;
