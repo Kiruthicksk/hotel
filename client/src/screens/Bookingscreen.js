@@ -61,7 +61,7 @@ function Bookingscreen({ match }) {
         transactionid: uuidv4(),
       };
       console.log(bookingDetails);
-      const response = await axios.post("/api/bookings/bookroom", bookingDetails);
+      const response = await axios.post("https://hotel-manis-lodge.onrender.com/api/bookings/bookroom", bookingDetails);
       Swal.fire(
         "Congratulations",
         "Your Room Booked Successfully",
