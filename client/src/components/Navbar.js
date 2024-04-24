@@ -41,12 +41,12 @@ function Navbar() {
     return (
       <ul className="navbar-nav">
         <li className="nav-item active">
-          <a className="nav-link" href="https://hotel-manis-lodge.onrender.com/register">
+          <a className="nav-link" href="/register">
             Register
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="https://hotel-manis-lodge.onrender.com/login">
+          <a className="nav-link" href="/login">
             Login
           </a>
         </li>
