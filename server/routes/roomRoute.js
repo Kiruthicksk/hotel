@@ -62,4 +62,29 @@ router.post("/addroom", async (req, res) => {
   }
 });
 
+router.put("/updateroom/:id", async (req, res) => {
+  try {
+    const roomId = req.params.id;
+    const updatedRoom = req.body;
+    const result = await Room.findByIdAndUpdate(roomId, updatedRoom, { new: true });
+    res.send(result);
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json({ message: error });
+  }
+});
+
+// Delete a room
+router.delete("/deleteroom/:id", async (req, res) => {
+  try {
+    const roomId = req.params.id;
+    const result = await Room.findByIdAndDelete(roomId);
+    res.send(result);
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json({ message: error });
+  }
+});
+
+
 module.exports = router;
